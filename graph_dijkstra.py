@@ -16,12 +16,12 @@ def dijkstra(graph, start_vertex, end_vertex):
     if start_vertex not in graph or end_vertex not in graph:
         return print(f'Какой-то из вершин нет в графе, проверьте ввод!')
     queue = deque([start_vertex])
-    short_distances = {}
-    short_distances[start_vertex] = 0
+    short_distances = {start_vertex: 0}
     while queue:
         curr_v = queue.popleft()
         for neigh_v in graph[curr_v]:
-            if neigh_v not in short_distances or short_distances[curr_v] + graph[curr_v][neigh_v] < short_distances[neigh_v]:
+            if neigh_v not in short_distances or short_distances[curr_v] + graph[curr_v][neigh_v] < \
+                    short_distances[neigh_v]:
                 short_distances[neigh_v] = short_distances[curr_v] + graph[curr_v][neigh_v]
                 queue.append(neigh_v)
     return print(short_distances)
