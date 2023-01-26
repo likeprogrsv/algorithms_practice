@@ -167,3 +167,4 @@ cython_debug/
 *.txt
 *.asc
 *.xlsx
+.vscode/
