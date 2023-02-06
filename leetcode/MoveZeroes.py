@@ -16,4 +16,4 @@ class Solution:
 
 
 s = Solution()
-print(s.moveZeroes([0,1,0,3,12]))
+print(s.moveZeroes([2,1,0,3,12,0,2]))
